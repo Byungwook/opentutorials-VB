@@ -2,12 +2,38 @@
 	<head>
 		<meta charset="utf-8" />
 		
-		<style>
+		<style type="text/css">
 			body
 			{
 				font-size: 0.8em;
 				font-family: dotum;
 				line-height: 1.6em;
+			}
+			body.black
+			{
+				background-color: black;
+				color: white;
+			}
+			body.white
+			{
+				background-color: white;
+				color: black;
+			}
+			body.black a
+			{
+				color: white;
+			}
+			body.black a:hover
+			{
+				color: #FF6600;
+			}
+			body.black header
+			{
+				border-bottom: 1px solid #333333;
+			}
+			body.black nav
+			{
+				border-right: 1px solid #333333;
 			}
 			header
 			{
@@ -43,10 +69,12 @@
 			}
 			a:link, a:visited
 			{
+				/* a 링크의 색깔 (클릭했을 때나 안했을 때 변화없이) */
 				color: #333333;
 			}
 			a:hover
 			{
+				/* 링크에 마우스 댔을 때 변하는 색깔*/
 				color: #FF6600;
 			}
 			h1
@@ -62,8 +90,8 @@
 			</header>
 			
 			<div id="toolbar">
-				<input type="button" value="black" />
-				<input type="button" value="white" />
+				<input type="button" value="black" onclick="document.getElementById('body').className='black'"/>
+				<input type="button" value="white" onclick="document.getElementById('body').className='white'"/>
 			</div>
 			
 			<nav>
